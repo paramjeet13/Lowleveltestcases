@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48853" started-at="2020-01-30T10:05:25Z" finished-at="2020-01-30T10:06:14Z">
+  <suite name="Default suite" duration-ms="49078" started-at="2020-01-31T06:04:41Z" finished-at="2020-01-31T06:05:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48853" started-at="2020-01-30T10:05:25Z" finished-at="2020-01-30T10:06:14Z">
+    <test name="Default test" duration-ms="49078" started-at="2020-01-31T06:04:41Z" finished-at="2020-01-31T06:05:30Z">
       <class name="com.training.sanity.tests.CartRemoval_RTTC_010">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.CartRemoval_RTTC_010@4678c730]" name="setUpBeforeClass" is-config="true" duration-ms="19746" started-at="2020-01-30T15:35:25Z" finished-at="2020-01-30T15:35:45Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.CartRemoval_RTTC_010@4678c730]" name="setUpBeforeClass" is-config="true" duration-ms="19835" started-at="2020-01-31T11:34:41Z" finished-at="2020-01-31T11:35:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.CartRemoval_RTTC_010@4678c730]" name="validLoginTest" duration-ms="27301" started-at="2020-01-30T15:35:45Z" finished-at="2020-01-30T15:36:12Z">
+        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.CartRemoval_RTTC_010@4678c730]" name="validLoginTest" duration-ms="27390" started-at="2020-01-31T11:35:01Z" finished-at="2020-01-31T11:35:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.CartRemoval_RTTC_010@4678c730]" name="tearDown" is-config="true" duration-ms="1778" started-at="2020-01-30T15:36:12Z" finished-at="2020-01-30T15:36:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.CartRemoval_RTTC_010@4678c730]" name="tearDown" is-config="true" duration-ms="1821" started-at="2020-01-31T11:35:28Z" finished-at="2020-01-31T11:35:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -43,7 +43,7 @@ public class FingerRingAddToCart_RTTC_009 {
 	@FindBy(id="button-cart")
 	private WebElement addToCartBtn;
 	
-//	@FindBy(xpath="//ul[@class='noty_cont noty_layout_topRight']")
+//	@FindBy(xpath="//ul[@class='noty_text_body']")
 //	private WebElement confirmationAlert;
 	
 	@FindBy(xpath="//i[contains(@class, 'tb_icon ico-linea-ecommerce-bag')]")
@@ -65,7 +65,7 @@ public class FingerRingAddToCart_RTTC_009 {
 		act.moveToElement(cartIcon).build().perform();
 	}
 	
-	public void clickViewCard() {
+	public void clickViewCart() {
 		this.viewCart.click();
 		
 	}

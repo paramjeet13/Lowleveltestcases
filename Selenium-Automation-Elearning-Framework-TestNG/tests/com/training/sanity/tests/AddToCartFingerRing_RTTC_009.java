@@ -1,14 +1,20 @@
 package com.training.sanity.tests;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.training.generics.AppScreenShot;
+import com.training.generics.ScreenShot;
 import com.training.pom.FingerRingAddToCart_RTTC_009;
 import com.training.pom.SearchFingerRing_RTTC_008;
 import com.training.utility.DriverFactory;
@@ -19,7 +25,7 @@ public class AddToCartFingerRing_RTTC_009 {
 	private String baseUrl;
 	private FingerRingAddToCart_RTTC_009 addToCartFingerRing;
 	private static Properties properties;
-	//private ScreenShot screenShot;
+	private AppScreenShot screenShot;
 
 	@BeforeTest
 	public void setUpBeforeClass() throws IOException {
@@ -29,7 +35,7 @@ public class AddToCartFingerRing_RTTC_009 {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		addToCartFingerRing = new FingerRingAddToCart_RTTC_009(driver); 
 		baseUrl = properties.getProperty("baseURL");
-		//screenShot = new ScreenShot(driver); 
+		screenShot = new AppScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
@@ -46,9 +52,11 @@ public class AddToCartFingerRing_RTTC_009 {
 		addToCartFingerRing.searchClick("Finger Ring");
 		addToCartFingerRing.clickProduct();
 		addToCartFingerRing.clickAddToCart();
+		Thread.sleep(10000);
 		addToCartFingerRing.cartHover();
-		addToCartFingerRing.clickViewCard();
+		addToCartFingerRing.clickViewCart();
 		addToCartFingerRing.textVerification();
-
+		screenShot.captureScreenShot("RTTC_009");;
+		
 	}
 }

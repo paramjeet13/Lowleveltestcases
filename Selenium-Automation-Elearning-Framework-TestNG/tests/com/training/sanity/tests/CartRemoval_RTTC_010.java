@@ -9,6 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.training.generics.AppScreenShot;
+import com.training.generics.ScreenShot;
 import com.training.pom.FingerRingAddToCart_RTTC_009;
 import com.training.pom.RemoveCart_RTTC_010;
 import com.training.utility.DriverFactory;
@@ -19,7 +21,7 @@ public class CartRemoval_RTTC_010 {
 	private String baseUrl;
 	private RemoveCart_RTTC_010 cartRemoval;
 	private static Properties properties;
-	//private ScreenShot screenShot;
+	private AppScreenShot screenShot;
 
 	@BeforeTest
 	public void setUpBeforeClass() throws IOException {
@@ -29,7 +31,7 @@ public class CartRemoval_RTTC_010 {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		cartRemoval = new RemoveCart_RTTC_010(driver); 
 		baseUrl = properties.getProperty("baseURL");
-		//screenShot = new ScreenShot(driver); 
+		screenShot = new AppScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
@@ -47,11 +49,12 @@ public class CartRemoval_RTTC_010 {
 		cartRemoval.clickProduct();
 		cartRemoval.clickAddToCart();
 		cartRemoval.cartHover();
-		cartRemoval.clickViewCard();
+		cartRemoval.clickViewCart();
 		cartRemoval.textVerification();
 		cartRemoval.clickRemoveCart();
 		cartRemoval.clickRefresh();
 		cartRemoval.removalTextVerification();
+		screenShot.captureScreenShot("RTTC_010");;
 
 	}
 }

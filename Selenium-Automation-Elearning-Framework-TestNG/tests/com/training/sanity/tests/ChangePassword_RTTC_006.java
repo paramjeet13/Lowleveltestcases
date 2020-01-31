@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.training.generics.AppScreenShot;
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginForChangePassword_RTTC_006;
 import com.training.pom.LoginPOM;
@@ -28,7 +29,7 @@ public class ChangePassword_RTTC_006 {
 	private String baseUrl;
 	private LoginForChangePassword_RTTC_006 loginForChangePassword;
 	private static Properties properties;
-	//private ScreenShot screenShot;
+	private AppScreenShot screenShot;
 	
 	@BeforeTest
 	public void setUpBeforeClass() throws IOException {
@@ -38,20 +39,11 @@ public class ChangePassword_RTTC_006 {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginForChangePassword = new LoginForChangePassword_RTTC_006(driver); 
 		baseUrl = properties.getProperty("baseURL");
-		//screenShot = new ScreenShot(driver); 
+		screenShot = new AppScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
-	/*
-	@BeforeMethod
-	public void setUp() throws Exception {
-		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		loginForChangePassword = new LoginForChangePassword_RTTC_006(driver); 
-		baseUrl = properties.getProperty("baseURL");
-		//screenShot = new ScreenShot(driver); 
-		// open the browser 
-		driver.get(baseUrl);
-	} */
+	
 	@AfterTest
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
@@ -65,7 +57,7 @@ public class ChangePassword_RTTC_006 {
 		loginForChangePassword.sendUserName("test@gmail.com");
 		loginForChangePassword.sendPassword("test123");
 		loginForChangePassword.clickLoginBtn(); 
-		//screenShot.captureScreenShot("First");
+		
 	}
 	@Test(priority=1)
 	public void changePassword() {
@@ -74,6 +66,7 @@ public class ChangePassword_RTTC_006 {
 		loginForChangePassword.sPassword("test123");
 		loginForChangePassword.clickContinueBtn();
 		loginForChangePassword.msgVerification();  //Asserting by accessing method
+		screenShot.captureScreenShot("RTTC_006");
 		
 	}
 	

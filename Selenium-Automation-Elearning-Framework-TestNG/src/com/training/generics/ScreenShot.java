@@ -31,7 +31,7 @@ public class ScreenShot {
 		
 		// to be changed 
 		String path = "C:\\Users\\Naveen\\Desktop\\screenshots\\";
-		String fileName ="";
+		String fileName =" ";
 
 		GregorianCalendar calendar = new GregorianCalendar(); 
 		

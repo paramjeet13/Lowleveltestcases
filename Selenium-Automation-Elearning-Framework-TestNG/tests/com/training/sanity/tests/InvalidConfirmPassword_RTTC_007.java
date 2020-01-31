@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.training.generics.AppScreenShot;
 import com.training.pom.InvalidPassword_RTTC_007;
 import com.training.pom.LoginForChangePassword_RTTC_006;
 import com.training.utility.DriverFactory;
@@ -25,7 +26,7 @@ public class InvalidConfirmPassword_RTTC_007 {
 	private String baseUrl;
 	private InvalidPassword_RTTC_007 invalidPassword;
 	private static Properties properties;
-	//private ScreenShot screenShot;
+	private AppScreenShot screenShot;
 	
 	@BeforeTest
 	public void setUpBeforeClass() throws IOException {
@@ -35,7 +36,7 @@ public class InvalidConfirmPassword_RTTC_007 {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		invalidPassword = new InvalidPassword_RTTC_007(driver); 
 		baseUrl = properties.getProperty("baseURL");
-		//screenShot = new ScreenShot(driver); 
+		screenShot = new AppScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
 	}
@@ -62,7 +63,7 @@ public class InvalidConfirmPassword_RTTC_007 {
 		invalidPassword.sendUserName("test@gmail.com");
 		invalidPassword.sendPassword("test123");
 		invalidPassword.clickLoginBtn(); 
-		//screenShot.captureScreenShot("First");
+		
 	}
 	@Test(priority=1)
 	public void changePassword() {
@@ -71,6 +72,7 @@ public class InvalidConfirmPassword_RTTC_007 {
 		invalidPassword.sPassword("test12");
 		invalidPassword.clickContinueBtn();
 		invalidPassword.msgVerification(); //Asserting by accessing method
+		screenShot.captureScreenShot("RTTC_007");
 		
 	}
 

@@ -69,7 +69,7 @@ public class RemoveCart_RTTC_010 {
 		act.moveToElement(cartIcon).build().perform();
 	}
 	
-	public void clickViewCard() {
+	public void clickViewCart() {
 		this.viewCart.click();
 		
 	}
