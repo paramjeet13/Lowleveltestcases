@@ -2,6 +2,7 @@ package com.training.sanity.tests;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -57,7 +58,7 @@ public class ChangePassword_RTTC_006 {
 		loginForChangePassword.sendUserName("test@gmail.com");
 		loginForChangePassword.sendPassword("test123");
 		loginForChangePassword.clickLoginBtn(); 
-		
+			
 	}
 	@Test(priority=1)
 	public void changePassword() {

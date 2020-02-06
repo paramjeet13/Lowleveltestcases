@@ -18,7 +18,7 @@ public class LoginForChangePassword_RTTC_006 {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-
+		
 	@FindBy(xpath="//i[contains(@class, 'fa fa-user-o')]")
 	private WebElement login;
 

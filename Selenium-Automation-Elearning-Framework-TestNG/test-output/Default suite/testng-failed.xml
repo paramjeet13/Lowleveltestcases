@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.AddToCartFingerRing_RTTC_009">
+      <class name="com.training.sanity.tests.AdminInvalidLogin_RTTC_037">
         <methods>
           <include name="setUpBeforeClass"/>
-          <include name="validLoginTest"/>
+          <include name="wrongCreds" invocation-numbers="0 1 2 3"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.AddToCartFingerRing_RTTC_009 -->
+      </class> <!-- com.training.sanity.tests.AdminInvalidLogin_RTTC_037 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
